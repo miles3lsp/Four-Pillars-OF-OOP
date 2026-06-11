@@ -1,3 +1,4 @@
+# Base parent class
 class Vehicle:
     def __init__(self, brand, year):
         self.brand = brand
@@ -6,9 +7,10 @@ class Vehicle:
     def display_info(self):
         print(f"Vehicle: {self.brand}, Year: {self.year}")
 
+# Child class inheriting from Vehicle
 class Car(Vehicle):
     def __init__(self, brand, year, max_speed):
-        super().__init__(brand, year)
+        super().__init__(brand, year) # Reuse parent constructor
         self.max_speed = max_speed
 
     def drive(self):
